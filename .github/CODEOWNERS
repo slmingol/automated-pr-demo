@@ -1,0 +1,4 @@
+# All files on deploy branch require deploy-admins approval
+# This file must live on the deploy branch (or default branch) to take effect
+
+*  @your-org/deploy-admins

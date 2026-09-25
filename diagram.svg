@@ -1,0 +1,242 @@
+<svg viewBox="0 0 1080 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif" style="background:#0D1117">
+  <defs>
+    <marker id="ag" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#3FB950"/></marker>
+    <marker id="ar" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#F85149"/></marker>
+    <marker id="ab" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#58A6FF"/></marker>
+    <marker id="aa" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#E3B341"/></marker>
+    <marker id="ap" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#BC8CFF"/></marker>
+  </defs>
+
+  <!-- Backgrounds -->
+  <rect width="1080" height="600" fill="#0D1117"/>
+  <rect x="0"   y="0" width="162" height="600" fill="#161B22" opacity="0.55"/>
+  <rect x="350" y="0" width="250" height="600" fill="#161B22" opacity="0.3"/>
+  <rect x="790" y="0" width="290" height="600" fill="#161B22" opacity="0.3"/>
+
+  <!-- Swimlane dividers -->
+  <line x1="162" y1="36" x2="162" y2="600" stroke="#30363D" stroke-width="1" opacity="0.6"/>
+  <line x1="350" y1="36" x2="350" y2="600" stroke="#30363D" stroke-width="1" opacity="0.6"/>
+  <line x1="600" y1="36" x2="600" y2="600" stroke="#30363D" stroke-width="1" opacity="0.6"/>
+  <line x1="790" y1="36" x2="790" y2="600" stroke="#30363D" stroke-width="1" opacity="0.6"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1080" height="36" fill="#1C2128"/>
+  <line x1="0" y1="36" x2="1080" y2="36" stroke="#30363D" stroke-width="1"/>
+  <text x="81"  y="22" text-anchor="middle" font-size="10" font-weight="600" fill="#8B949E" letter-spacing="0.08em">DEVELOPER</text>
+  <text x="256" y="22" text-anchor="middle" font-size="10" font-weight="600" fill="#8B949E" letter-spacing="0.08em">OPENS PR</text>
+  <text x="475" y="22" text-anchor="middle" font-size="10" font-weight="600" fill="#8B949E" letter-spacing="0.08em">GATE CHECKS</text>
+  <text x="695" y="22" text-anchor="middle" font-size="10" font-weight="600" fill="#8B949E" letter-spacing="0.08em">deploy BRANCH</text>
+  <text x="935" y="22" text-anchor="middle" font-size="10" font-weight="600" fill="#8B949E" letter-spacing="0.08em">PRODUCTION</text>
+
+  <!-- ═══════════════════════════════════════════
+       COL 1 — Developer / source branches
+  ════════════════════════════════════════════ -->
+
+  <!-- Section label: allowed -->
+  <text x="81" y="52" text-anchor="middle" font-size="10" font-weight="600" fill="#3FB950">✓  ALLOWED SOURCES</text>
+  <line x1="14" y1="55" x2="148" y2="55" stroke="#3FB950" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+
+  <!-- main -->
+  <rect x="10" y="60" width="142" height="46" rx="6" fill="#1A2B1A" stroke="#238636" stroke-width="1.5"/>
+  <circle cx="26" cy="81" r="5" fill="#3FB950"/>
+  <text x="36" y="78" font-size="12" font-weight="600" fill="#3FB950" font-family="'Courier New',monospace">main</text>
+  <text x="36" y="94" font-size="10" fill="#8B949E">2-approval SDLC</text>
+
+  <!-- release/* -->
+  <rect x="10" y="118" width="142" height="46" rx="6" fill="#111B2B" stroke="#1F6FEB" stroke-width="1.5"/>
+  <circle cx="26" cy="141" r="5" fill="#58A6FF"/>
+  <text x="36" y="138" font-size="12" font-weight="600" fill="#58A6FF" font-family="'Courier New',monospace">release/*</text>
+  <text x="36" y="154" font-size="10" fill="#8B949E">release branches</text>
+
+  <!-- Section label: blocked -->
+  <text x="81" y="215" text-anchor="middle" font-size="10" font-weight="600" fill="#F85149">✕  BLOCKED SOURCE</text>
+  <line x1="14" y1="218" x2="148" y2="218" stroke="#DA3633" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+
+  <!-- feature/* -->
+  <rect x="10" y="223" width="142" height="46" rx="6" fill="#2B1111" stroke="#DA3633" stroke-width="1.5"/>
+  <circle cx="26" cy="246" r="5" fill="#F85149"/>
+  <text x="36" y="243" font-size="12" font-weight="600" fill="#F85149" font-family="'Courier New',monospace">feature/*</text>
+  <text x="36" y="259" font-size="10" fill="#8B949E">feature branches</text>
+  <rect x="22" y="283" width="118" height="20" rx="4" fill="#2B1111" stroke="#DA3633" stroke-width="1"/>
+  <text x="81" y="297" text-anchor="middle" font-size="10" font-weight="600" fill="#F85149">✕  BLOCKED</text>
+
+  <!-- ═══════════════════════════════════════════
+       COL 2 — Opens PR
+  ════════════════════════════════════════════ -->
+
+  <!-- Allowed PR -->
+  <rect x="172" y="62" width="166" height="52" rx="6" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+  <text x="255" y="83" text-anchor="middle" font-size="11" font-weight="600" fill="#E6EDF3">Open PR</text>
+  <text x="255" y="98" text-anchor="middle" font-size="10" fill="#8B949E" font-family="'Courier New',monospace">→ deploy</text>
+  <text x="255" y="109" text-anchor="middle" font-size="9" fill="#656D76">ruleset: no direct push</text>
+
+  <!-- Blocked PR -->
+  <rect x="172" y="228" width="166" height="44" rx="6" fill="#2B1111" stroke="#DA3633" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="255" y="249" text-anchor="middle" font-size="11" font-weight="600" fill="#F85149">Open PR</text>
+  <text x="255" y="265" text-anchor="middle" font-size="10" fill="#8B949E" font-family="'Courier New',monospace">→ deploy</text>
+
+  <!-- Arrows col1 → col2 -->
+  <path d="M 152 81 L 170 88" stroke="#3FB950" stroke-width="1.5" fill="none" marker-end="url(#ag)"/>
+  <path d="M 152 141 L 170 100" stroke="#58A6FF" stroke-width="1.5" fill="none" marker-end="url(#ab)"/>
+  <path d="M 152 246 L 170 250" stroke="#F85149" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#ar)"/>
+
+  <!-- ═══════════════════════════════════════════
+       COL 3 — Gate Checks (250px wide lane)
+  ════════════════════════════════════════════ -->
+
+  <!-- Outer gate box -->
+  <rect x="360" y="44" width="228" height="172" rx="8" fill="#1C2128" stroke="#E3B341" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="474" y="63" text-anchor="middle" font-size="11" font-weight="700" fill="#E3B341">Gate Checks</text>
+  <line x1="368" y1="69" x2="580" y2="69" stroke="#E3B341" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Row 1 — AUTO: Source check GHA -->
+  <rect x="365" y="73" width="218" height="34" rx="4" fill="#0D1A0D"/>
+  <circle cx="378" cy="88" r="3.5" fill="#3FB950"/>
+  <text x="388" y="92" font-size="10" font-weight="600" fill="#E6EDF3">Source check GHA</text>
+  <text x="388" y="103" font-size="9" fill="#8B949E" font-family="'Courier New',monospace">validate-deploy-source.yml</text>
+  <rect x="532" y="77" width="44" height="14" rx="3" fill="#0D1A0D" stroke="#3FB950" stroke-width="1"/>
+  <text x="554" y="88" text-anchor="middle" font-size="8" font-weight="700" fill="#3FB950">AUTO</text>
+
+  <!-- Row 2 — HUMAN REQ: CODEOWNERS review -->
+  <rect x="365" y="111" width="218" height="52" rx="4" fill="#1E1500" stroke="#E3B341" stroke-width="1"/>
+  <circle cx="378" cy="130" r="4" fill="#E3B341"/>
+  <text x="390" y="126" font-size="10" font-weight="700" fill="#E3B341">CODEOWNERS review</text>
+  <text x="390" y="139" font-size="9" fill="#C9A227">deploy-admins must approve</text>
+  <text x="390" y="151" font-size="8.5" fill="#8B949E">PR blocked until human clicks Approve</text>
+  <rect x="513" y="115" width="64" height="14" rx="3" fill="#2B1A00" stroke="#E3B341" stroke-width="1"/>
+  <text x="545" y="126" text-anchor="middle" font-size="8" font-weight="700" fill="#E3B341">HUMAN REQ</text>
+
+  <!-- Row 3 — AUTO: Ruleset enforcement -->
+  <rect x="365" y="167" width="218" height="34" rx="4" fill="#0D1A0D"/>
+  <circle cx="378" cy="182" r="3.5" fill="#3FB950"/>
+  <text x="388" y="186" font-size="10" font-weight="600" fill="#E6EDF3">Ruleset enforcement</text>
+  <text x="388" y="197" font-size="9" fill="#8B949E">no direct push · req status check</text>
+  <rect x="532" y="171" width="44" height="14" rx="3" fill="#0D1A0D" stroke="#3FB950" stroke-width="1"/>
+  <text x="554" y="182" text-anchor="middle" font-size="8" font-weight="700" fill="#3FB950">AUTO</text>
+
+  <!-- Fail box -->
+  <rect x="360" y="228" width="228" height="62" rx="6" fill="#2B1111" stroke="#DA3633" stroke-width="1.5"/>
+  <text x="474" y="251" text-anchor="middle" font-size="11" font-weight="700" fill="#F85149">✕  Source check FAILS</text>
+  <text x="474" y="267" text-anchor="middle" font-size="9" fill="#8B949E" font-family="'Courier New',monospace">head_ref not in allowed list</text>
+  <text x="474" y="280" text-anchor="middle" font-size="9" fill="#8B949E">exit 1 → merge blocked</text>
+
+  <!-- Arrows col2 → col3 -->
+  <path d="M 338 88  L 358 88"  stroke="#E3B341" stroke-width="1.5" fill="none" marker-end="url(#aa)"/>
+  <path d="M 338 250 L 358 250" stroke="#F85149" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#ar)"/>
+
+  <!-- ═══════════════════════════════════════════
+       COL 4 — deploy branch
+  ════════════════════════════════════════════ -->
+
+  <rect x="610" y="62" width="168" height="60" rx="8" fill="#111B2B" stroke="#1F6FEB" stroke-width="2"/>
+  <text x="694" y="86" text-anchor="middle" font-size="13" font-weight="700" fill="#58A6FF" font-family="'Courier New',monospace">deploy</text>
+  <text x="694" y="103" text-anchor="middle" font-size="10" fill="#8B949E">merge triggers push event</text>
+  <text x="694" y="115" text-anchor="middle" font-size="10" fill="#8B949E" font-family="'Courier New',monospace">deploy.yml fires</text>
+
+  <!-- Blocked dead-end -->
+  <rect x="610" y="236" width="168" height="38" rx="6" fill="#2B1111" stroke="#DA3633" stroke-width="1" stroke-dasharray="4,3" opacity="0.7"/>
+  <text x="694" y="260" text-anchor="middle" font-size="11" fill="#F85149">PR cannot merge</text>
+
+  <!-- Arrows col3 → col4 -->
+  <path d="M 588 88  L 608 88"  stroke="#3FB950" stroke-width="2" fill="none" marker-end="url(#ag)"/>
+  <text x="598" y="80" text-anchor="middle" font-size="9" fill="#3FB950">PASS</text>
+  <path d="M 588 259 L 608 255" stroke="#F85149" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#ar)"/>
+
+  <!-- ═══════════════════════════════════════════
+       COL 5 — Production
+  ════════════════════════════════════════════ -->
+
+  <!-- Environment gate box -->
+  <rect x="802" y="52" width="266" height="86" rx="8" fill="#1C1A2B" stroke="#6E40C9" stroke-width="1.5"/>
+  <text x="935" y="73" text-anchor="middle" font-size="11" font-weight="700" fill="#BC8CFF">production environment</text>
+  <line x1="810" y1="79" x2="1060" y2="79" stroke="#6E40C9" stroke-width="0.5" opacity="0.4"/>
+  <circle cx="816" cy="96" r="3" fill="#BC8CFF"/>
+  <text x="826" y="100" font-size="10" fill="#E6EDF3">Required reviewers gate</text>
+  <circle cx="816" cy="116" r="3" fill="#BC8CFF"/>
+  <text x="826" y="120" font-size="10" fill="#E6EDF3">Deploy branch: </text>
+  <text x="916" y="120" font-size="10" fill="#58A6FF" font-family="'Courier New',monospace">deploy</text>
+  <text x="962" y="120" font-size="10" fill="#E6EDF3">only</text>
+
+  <!-- Deployment node -->
+  <rect x="802" y="154" width="266" height="50" rx="8" fill="#1A2B1A" stroke="#238636" stroke-width="1.5"/>
+  <text x="935" y="176" text-anchor="middle" font-size="12" font-weight="600" fill="#3FB950">Deployment runs</text>
+  <text x="935" y="193" text-anchor="middle" font-size="10" fill="#8B949E">kubectl / helm / terraform</text>
+
+  <!-- Arrows col4 → prod -->
+  <path d="M 778 92  L 800 92"  stroke="#58A6FF" stroke-width="1.5" fill="none" marker-end="url(#ab)"/>
+  <!-- env gate → deploy node (vertical) -->
+  <path d="M 935 138 L 935 152" stroke="#BC8CFF" stroke-width="1.5" fill="none" marker-end="url(#ap)"/>
+  <text x="944" y="148" font-size="9" fill="#BC8CFF">approved</text>
+
+  <!-- ═══════════════════════════════════════════
+       BOTTOM — Summary + Files
+  ════════════════════════════════════════════ -->
+
+  <line x1="10" y1="342" x2="1070" y2="342" stroke="#30363D" stroke-width="1" opacity="0.5"/>
+
+  <!-- Allowed path summary -->
+  <rect x="10" y="354" width="520" height="90" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <text x="20" y="374" font-size="11" font-weight="600" fill="#3FB950">Allowed path</text>
+  <text x="20" y="391" font-size="10" fill="#8B949E" font-family="'Courier New',monospace">main / release/*</text>
+  <text x="122" y="391" font-size="10" fill="#8B949E"> → open PR to deploy</text>
+  <text x="20" y="406" font-size="10" fill="#8B949E">source check (AUTO) + CODEOWNERS approval (HUMAN) + ruleset (AUTO) all pass</text>
+  <text x="20" y="421" font-size="10" fill="#8B949E">merge fires deploy.yml → production env gate → human approves → deployment runs</text>
+
+  <!-- Blocked path summary -->
+  <rect x="548" y="354" width="522" height="90" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <text x="558" y="374" font-size="11" font-weight="600" fill="#F85149">Blocked paths</text>
+  <text x="558" y="391" font-size="10" fill="#8B949E">Direct push → ruleset rejects (no human can push directly)</text>
+  <text x="558" y="406" font-size="10" fill="#8B949E">feature/* PR → source check exits 1, required check fails, merge blocked</text>
+  <text x="558" y="421" font-size="10" fill="#8B949E">No CODEOWNERS approval → PR sits open, merge button disabled</text>
+  <text x="558" y="436" font-size="10" fill="#8B949E">Env gate declined → deploy.yml job queued but never runs</text>
+
+  <!-- Files strip -->
+  <rect x="10" y="458" width="1060" height="130" rx="8" fill="#1C2128" stroke="#30363D" stroke-width="1"/>
+  <text x="20" y="477" font-size="10" font-weight="600" fill="#8B949E" letter-spacing="0.07em">FILES</text>
+  <line x1="10" y1="483" x2="1070" y2="483" stroke="#30363D" stroke-width="0.5"/>
+
+  <!-- File chips row -->
+  <rect x="20"  y="492" width="222" height="20" rx="4" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <text x="30"  y="506" font-size="9" fill="#58A6FF" font-family="'Courier New',monospace">validate-deploy-source.yml</text>
+
+  <rect x="252" y="492" width="138" height="20" rx="4" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <text x="262" y="506" font-size="9" fill="#58A6FF" font-family="'Courier New',monospace">deploy.yml</text>
+
+  <rect x="400" y="492" width="130" height="20" rx="4" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <text x="410" y="506" font-size="9" fill="#58A6FF" font-family="'Courier New',monospace">CODEOWNERS</text>
+
+  <rect x="540" y="492" width="238" height="20" rx="4" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <text x="550" y="506" font-size="9" fill="#58A6FF" font-family="'Courier New',monospace">deploy-branch-ruleset.json</text>
+
+  <rect x="788" y="492" width="172" height="20" rx="4" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <text x="798" y="506" font-size="9" fill="#58A6FF" font-family="'Courier New',monospace">create-deploy-branch.sh</text>
+
+  <rect x="970" y="492" width="90" height="20" rx="4" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <text x="980" y="506" font-size="9" fill="#58A6FF" font-family="'Courier New',monospace">apply-ruleset.sh</text>
+
+  <!-- Descriptions -->
+  <text x="30"  y="528" font-size="9" fill="#8B949E">AUTO: blocks disallowed source branches</text>
+  <text x="262" y="528" font-size="9" fill="#8B949E">triggers deployment on push</text>
+  <text x="410" y="528" font-size="9" fill="#8B949E">HUMAN: team approval required</text>
+  <text x="550" y="528" font-size="9" fill="#8B949E">no direct push + required status</text>
+  <text x="798" y="528" font-size="9" fill="#8B949E">one-time repo bootstrap</text>
+  <text x="980" y="528" font-size="9" fill="#8B949E">gh api import</text>
+
+  <!-- Directory -->
+  <text x="30"  y="546" font-size="9" fill="#656D76" font-family="'Courier New',monospace">.github/workflows/</text>
+  <text x="262" y="546" font-size="9" fill="#656D76" font-family="'Courier New',monospace">.github/workflows/</text>
+  <text x="410" y="546" font-size="9" fill="#656D76" font-family="'Courier New',monospace">.github/</text>
+  <text x="550" y="546" font-size="9" fill="#656D76" font-family="'Courier New',monospace">rulesets/</text>
+  <text x="798" y="546" font-size="9" fill="#656D76" font-family="'Courier New',monospace">scripts/</text>
+  <text x="980" y="546" font-size="9" fill="#656D76" font-family="'Courier New',monospace">scripts/</text>
+
+  <!-- AUTO/HUMAN legend -->
+  <rect x="20" y="560" width="44" height="14" rx="3" fill="#0D1A0D" stroke="#3FB950" stroke-width="1"/>
+  <text x="42" y="571" text-anchor="middle" font-size="8" font-weight="700" fill="#3FB950">AUTO</text>
+  <text x="70" y="571" font-size="9" fill="#8B949E">GitHub Actions or ruleset enforces automatically</text>
+  <rect x="370" y="560" width="64" height="14" rx="3" fill="#2B1A00" stroke="#E3B341" stroke-width="1"/>
+  <text x="402" y="571" text-anchor="middle" font-size="8" font-weight="700" fill="#E3B341">HUMAN REQ</text>
+  <text x="440" y="571" font-size="9" fill="#8B949E">a team member must click Approve before merge unblocks</text>
+</svg>

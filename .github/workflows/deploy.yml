@@ -1,0 +1,22 @@
+name: Deploy on Merge to Deploy Branch
+
+on:
+  push:
+    branches: [deploy]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production  # triggers environment protection rules / required reviewers
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify merge source
+        run: |
+          MERGE_COMMIT_MSG=$(git log -1 --pretty=%s)
+          echo "Deploying: $MERGE_COMMIT_MSG"
+
+      - name: Deploy
+        run: |
+          echo "Running deploy steps here..."
+          # kubectl apply, helm upgrade, terraform apply, etc.

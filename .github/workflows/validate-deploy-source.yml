@@ -1,0 +1,22 @@
+name: Validate Deploy Source
+
+on:
+  pull_request:
+    branches: [deploy]
+
+jobs:
+  check-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enforce source branch policy
+        run: |
+          ALLOWED_PATTERNS="^main$|^release/.*$"
+          SOURCE="${{ github.head_ref }}"
+
+          if echo "$SOURCE" | grep -qE "$ALLOWED_PATTERNS"; then
+            echo "Source branch '$SOURCE' is allowed to merge into deploy."
+            exit 0
+          fi
+
+          echo "::error::PRs to 'deploy' must originate from 'main' or 'release/*'. Got: '$SOURCE'"
+          exit 1
