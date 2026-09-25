@@ -1,5 +1,9 @@
 # automated-pr-demo
 
+<p align="center">
+  <img src="banner.svg" alt="automated-pr-demo banner" width="100%"/>
+</p>
+
 GitOps deploy branch protection — enforces what can and cannot merge into `deploy`.
 
 ## Policy

@@ -1,0 +1,117 @@
+<svg viewBox="0 0 1280 220" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D1117"/>
+      <stop offset="100%" style="stop-color:#161B22"/>
+    </linearGradient>
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#58A6FF"/>
+      <stop offset="50%" style="stop-color:#BC8CFF"/>
+      <stop offset="100%" style="stop-color:#3FB950"/>
+    </linearGradient>
+    <filter id="glow-blue">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-green">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="220" fill="url(#bg)"/>
+
+  <!-- Subtle grid lines -->
+  <line x1="0" y1="110" x2="1280" y2="110" stroke="#21262D" stroke-width="1"/>
+  <line x1="640" y1="0" x2="640" y2="220" stroke="#21262D" stroke-width="1"/>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="4" height="220" fill="url(#title-grad)"/>
+
+  <!-- Top border glow -->
+  <rect x="0" y="0" width="1280" height="1" fill="#30363D"/>
+  <rect x="0" y="219" width="1280" height="1" fill="#30363D"/>
+
+  <!-- Branch flow mini-diagram on right side -->
+  <!-- main pill -->
+  <rect x="900" y="68" width="72" height="24" rx="12" fill="#1A2B1A" stroke="#238636" stroke-width="1.5"/>
+  <text x="936" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#3FB950" font-family="'Courier New',monospace">main</text>
+
+  <!-- release pill -->
+  <rect x="900" y="104" width="84" height="24" rx="12" fill="#111B2B" stroke="#1F6FEB" stroke-width="1.5"/>
+  <text x="942" y="120" text-anchor="middle" font-size="11" font-weight="700" fill="#58A6FF" font-family="'Courier New',monospace">release/*</text>
+
+  <!-- feature pill (blocked) -->
+  <rect x="900" y="140" width="80" height="24" rx="12" fill="#2B1111" stroke="#DA3633" stroke-width="1.5"/>
+  <text x="940" y="156" text-anchor="middle" font-size="11" font-weight="700" fill="#F85149" font-family="'Courier New',monospace">feature/*</text>
+
+  <!-- Arrow connectors -->
+  <defs>
+    <marker id="ag2" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0 0,7 2.5,0 5" fill="#3FB950"/>
+    </marker>
+    <marker id="ab2" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0 0,7 2.5,0 5" fill="#58A6FF"/>
+    </marker>
+    <marker id="ar2" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0 0,7 2.5,0 5" fill="#F85149"/>
+    </marker>
+  </defs>
+
+  <!-- main → deploy arrow -->
+  <path d="M 972 80 Q 1010 80 1010 104 L 1010 110" stroke="#3FB950" stroke-width="1.5" fill="none" marker-end="url(#ag2)"/>
+  <!-- release → deploy arrow -->
+  <path d="M 984 116 L 1006 116" stroke="#58A6FF" stroke-width="1.5" fill="none" marker-end="url(#ab2)"/>
+  <!-- feature → blocked -->
+  <path d="M 980 152 L 1006 152" stroke="#F85149" stroke-width="1.5" fill="none" stroke-dasharray="3,2" marker-end="url(#ar2)"/>
+
+  <!-- deploy branch box -->
+  <rect x="1016" y="96" width="80" height="40" rx="8" fill="#111B2B" stroke="#1F6FEB" stroke-width="2"/>
+  <text x="1056" y="113" text-anchor="middle" font-size="12" font-weight="700" fill="#58A6FF" font-family="'Courier New',monospace">deploy</text>
+  <text x="1056" y="128" text-anchor="middle" font-size="9" fill="#8B949E">protected</text>
+
+  <!-- blocked X badge -->
+  <circle cx="1016" cy="152" r="10" fill="#2B1111" stroke="#DA3633" stroke-width="1.5"/>
+  <text x="1016" y="157" text-anchor="middle" font-size="12" font-weight="900" fill="#F85149">✕</text>
+
+  <!-- deploy → production arrow -->
+  <path d="M 1096 116 L 1118 116" stroke="#BC8CFF" stroke-width="1.5" fill="none" marker-end="url(#ab2)"/>
+
+  <!-- production box -->
+  <rect x="1120" y="96" width="100" height="40" rx="8" fill="#1C1A2B" stroke="#6E40C9" stroke-width="1.5"/>
+  <text x="1170" y="113" text-anchor="middle" font-size="11" font-weight="700" fill="#BC8CFF">production</text>
+  <text x="1170" y="128" text-anchor="middle" font-size="9" fill="#8B949E">env gate</text>
+
+  <!-- Section label -->
+  <text x="1042" y="58" text-anchor="middle" font-size="9" font-weight="600" fill="#656D76" letter-spacing="0.1em">FLOW</text>
+
+  <!-- ========== LEFT: Text content ========== -->
+
+  <!-- Eyebrow -->
+  <text x="32" y="52" font-size="11" font-weight="600" fill="#8B949E" letter-spacing="0.12em">GITOPS · SDLC · BRANCH PROTECTION</text>
+
+  <!-- Main title -->
+  <text x="32" y="110" font-size="52" font-weight="800" fill="url(#title-grad)" letter-spacing="-0.02em">automated-pr-demo</text>
+
+  <!-- Tagline -->
+  <text x="34" y="143" font-size="15" fill="#8B949E">Enforce who can merge to</text>
+  <text x="214" y="143" font-size="15" font-weight="700" fill="#58A6FF" font-family="'Courier New',monospace"> deploy</text>
+  <text x="272" y="143" font-size="15" fill="#8B949E"> — automatic gates, human approval, production environment lock.</text>
+
+  <!-- Pills row -->
+  <rect x="34" y="160" width="72" height="22" rx="11" fill="#0D1A0D" stroke="#238636" stroke-width="1"/>
+  <text x="70" y="175" text-anchor="middle" font-size="10" font-weight="700" fill="#3FB950">✓ AUTO</text>
+
+  <rect x="116" y="160" width="94" height="22" rx="11" fill="#1E1500" stroke="#E3B341" stroke-width="1"/>
+  <text x="163" y="175" text-anchor="middle" font-size="10" font-weight="700" fill="#E3B341">⬡ HUMAN REQ</text>
+
+  <rect x="220" y="160" width="102" height="22" rx="11" fill="#1C1A2B" stroke="#6E40C9" stroke-width="1"/>
+  <text x="271" y="175" text-anchor="middle" font-size="10" font-weight="700" fill="#BC8CFF">⬡ ENV GATE</text>
+
+  <rect x="332" y="160" width="108" height="22" rx="11" fill="#2B1111" stroke="#DA3633" stroke-width="1"/>
+  <text x="386" y="175" text-anchor="middle" font-size="10" font-weight="700" fill="#F85149">✕ DIRECT PUSH</text>
+
+  <!-- Bottom label -->
+  <text x="34" y="205" font-size="10" fill="#484F58">github.com/slmingol/automated-pr-demo</text>
+</svg>
