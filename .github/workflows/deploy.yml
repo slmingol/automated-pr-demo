@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: production  # triggers environment protection rules / required reviewers
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Verify merge source
         run: |
